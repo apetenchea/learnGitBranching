@@ -2,6 +2,7 @@ var Backbone = require('backbone');
 var GRAPHICS = require('../util/constants').GRAPHICS;
 
 var VisBase = require('../visuals/visBase').VisBase;
+var Crypto = require('crypto');
 
 var VisNode = VisBase.extend({
   defaults: {
@@ -440,7 +441,10 @@ var VisNode = VisBase.extend({
 
   makeText: function(paper) {
     var textPos = this.getTextScreenCoords();
-    return paper.text(textPos.x, textPos.y, String(this.get('id')));
+    var shasum = Crypto.createHash('sha1');
+    shasum.update(String(this.get('id')));
+    let dig = shasum.digest('hex');
+    return paper.text(textPos.x, textPos.y, dig.substring(0, 3));
   },
 
   genGraphics: function() {
