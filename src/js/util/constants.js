@@ -20,7 +20,7 @@ var GRAPHICS = {
   defaultEasing: 'easeInOut',
   defaultAnimationTime: 400,
 
-  rectFill: 'hsb(0.8816909813322127,0.6,1)',
+  rectFill: 'hsb(0.44,0.77,0.73)',
   headRectFill: '#7278FF',
   rectStroke: '#FFF',
   rectStrokeWidth: '3',
@@ -35,7 +35,7 @@ var GRAPHICS = {
   edgeUpstreamNoneOpacity: 0.15,
 
   visBranchStrokeWidth: 2,
-  visBranchStrokeColorNone: '#333',
+  visBranchStrokeColorNone: '#cccccc',
 
   defaultNodeFill: 'hsba(0.5,0.6,0.7,1)',
   defaultNodeStrokeWidth: 2,
